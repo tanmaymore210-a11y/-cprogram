@@ -1,0 +1,31 @@
+*******************************************************************************/
+/*NAME: TANMAY
+UIN: 251C031
+ROLL:24*/
+#include <stdio.h>
+
+int main() {
+    int physics;
+    int chemistry;
+    int maths;
+    int sum;
+    float avg;
+
+    printf("Enter physics marks: ");
+    scanf("%d", &physics);
+
+    printf("Enter chemistry marks: ");
+    scanf("%d", &chemistry);
+
+    printf("Enter maths marks: ");
+    scanf("%d", &maths);
+
+    sum = physics + chemistry + maths;
+    avg = (float)sum / 3;
+
+    printf("Average is %f\n", avg);
+
+    (avg >= 50) ? printf("Person is eligible for admission\n") : printf("Person is not eligible for admission\n");
+
+    return 0;
+}
