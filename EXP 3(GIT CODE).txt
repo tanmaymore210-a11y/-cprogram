@@ -1,0 +1,58 @@
+/*
+ * Name :-Tanmay More
+ * UIN :-251C031
+ * Class :-Civil
+ * DIV :-B */
+
+#include <stdio.h>
+
+int main() {
+	char operator;
+	double num1, num2, result;
+
+	// Label for the goto statement to return to the menu
+menu:
+	printf("\n*** Menu Driven Calculator ***\n");
+	printf("Enter an operator (+, -, *, /) or 'q' to quit: ");
+	// Clear input buffer before reading the operator
+	while ((getchar()) != '\n');
+	scanf("%c", &operator);
+
+	if (operator == 'q' || operator == 'Q') {
+		printf("Exiting the calculator. Goodbye!\n");
+		return 0; // Exit the program
+	}
+
+	printf("Enter two operands: ");
+	scanf("%lf %lf", &num1, &num2);
+
+	switch (operator) {
+	case '+':
+		result = num1 + num2;
+		printf("%.2lf + %.2lf = %.2lf\n", num1, num2, result);
+		break;
+	case '-':
+		result = num1 - num2;
+		printf("%.2lf - %.2lf = %.2lf\n", num1, num2, result);
+		break;
+	case '*':
+		result = num1 * num2;
+		printf("%.2lf * %.2lf = %.2lf\n", num1, num2, result);
+		break;
+	case '/':
+		if (num2 != 0) {
+			result = num1 / num2;
+			printf("%.2lf / %.2lf = %.2lf\n", num1, num2, result);
+		} else {
+			printf("Error! Division by zero is not allowed.\n");
+		}
+		break;
+	default:
+		printf("Error! The operator is not correct.\n");
+	}
+
+	// Use goto to jump back to the menu label for another calculation
+	goto menu;
+
+	return 0;
+}
