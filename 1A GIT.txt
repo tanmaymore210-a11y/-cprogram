@@ -1,0 +1,16 @@
+/*
+ * Name :-Tanmay More
+ * UIN :-251C031
+ * Class :-Civil
+ * DIV :-B */
+
+#include <stdio.h>
+
+int main() {
+    printf("NAME:-\tTanmay Shashikant More\n");
+    printf("AGE:-\t18\n");
+    printf("CLASS:-\tCIVIL\n");
+    printf("DIVISION:-\tB\n");
+    printf("UIN:-\t251C031\n");
+    return 0;
+}
